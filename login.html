@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box1 {
+        /* border:1px solid red; */
+        text-align: center;
+        color: rgb(172, 9, 150)
+    }
+
+    #box2 {
+        width: 350px;
+        height: 450px;
+        margin: auto;
+        /* border: 1px solid red; */
+        margin-top: 30px;
+        padding: 12px 20px;
+
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(236, 205, 205);
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+
+
+    /* form {border: 3px solid #f1f1f1;} */
+</style>
+
+<body>
+    <div class="box1">
+        <h3>SIGN IN</h3>
+        <h4>If you already have an account with us, sign in below</h4>
+    </div>
+    <div id="box2">
+
+        <form id="form">
+            <label>
+                <p>Email Address</p>
+                <input id="email" type="text" />
+            </label>
+
+            <label>
+                <p>Password</p>
+                <input id="pwd" type="password" placeholder="SHOW" />
+            </label>
+
+            <p>Forgot password</p>
+
+            <input type="checkbox" id="pwd" name="pwd" value="Remembered">
+            <label for="pwd">Remember Me</label>
+
+
+            <br><br>
+            <button style="padding: 5px 10px;"><a href="./page1.html">Sign in</a></button>
+
+    </div>
+    </form>
+</body>
+
+</html>
+<script>
+    var regdUsers = JSON.parse(localStorage.getItem("signUpDetails"));
+    console.log(regdUsers);
+
+    // var form=document.querySelector("#form").addEventListener("submit",formSubmit);
+    document.querySelector("#form").addEventListener("submit", formSubmit);
+
+    var form = document.querySelector("#form");
+    function formSubmit(event) {
+        event.preventDefault();
+
+        var email = form.email.value;
+
+        var pwd = form.pwd.value;
+        console.log(email, pwd);
+
+        for (var i = 0; i < regdUsers.length; i++) {
+            if (regdUsers[i].email == email && regdUsers[i].pwd == pwd) {
+                alert("successfully signed up");
+            }
+            else 
+            {
+                alert("wrong credentials");
+            }
+        }
+    }
+</script>

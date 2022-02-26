@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input[type=text],
+    input[type=number],
+    input[type=submit] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+
+    }
+
+    #box2 {
+        width: 450px;
+        height: 550px;
+        margin: auto;
+        /* border: 1px solid red; */
+        margin-top: 30px;
+        padding: 12px 20px;
+
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(236, 205, 205);
+    }
+
+    select {
+        background-color: rgb(28, 41, 56);
+        color: white;
+        border: 0px;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+</style>
+
+<body>
+
+    <div id="box2">
+        <h1>Create an Account</h1>
+        <hr>
+
+        <form id="form">
+            <label>
+                <label for="fname">First Name</label>
+                <input id="fname" type="text" />
+            </label>
+            <label>
+                <label for="lname">Last Name</label>
+                <input id="lname" type="text" />
+            </label>
+            <label>
+                <label for="email">Email</label>
+                <input id="email" type="text" />
+            </label>
+
+            <label>
+                <label for="cemail">Confirm Email</label>
+                <input id="cemail" type="text" />
+            </label>
+            <label>
+                <label for="zp">Zip/Postal Code</label>
+                <input id="zp" type="number" />
+            </label>
+            <label>
+                <label for="numb">Phone</label>
+                <input id="numb" type="number" />
+            </label>
+            <label>
+                <label for="pwd">Password</label>
+                <input id="pwd" type="text" placeholder="SHOW" />
+            </label>
+            <a href="Privacy Pocily" style=color:blue;>Privacy Pocily</a>
+            <label>
+                <button class="butt" style="padding: 5px 10px;"><a href="./login.html">sign Up</a></button>
+            </label>
+            <p></p>
+            <p>Questions?</p>
+            <p>We’re here for you! Call us at 1-800-756-5005.</p>
+            <h5>If you are logged in, move to sign-in<a href="login.html"><span style="color:red">sign up</span></a></h5>
+    </div>
+
+    </form>
+
+</body>
+
+</html>
+<!-- <script>
+    document.getElementById("login").addEventListener("click", function () {
+        window.location.href = "login.html"
+    });
+    document.getElementById("signup").addEventListener("click", function () {
+        window.location.href = "signup.html"
+    });
+
+    document.querySelector(".butt").addEventListener("click", myformSubmit);
+    var signupArr = JSON.parse(localStorage.getItem("signUpDetails")) || [];
+    function myformSubmit() {
+
+        var signupObj =
+        {
+            fname: document.querySelector("#fname").value,
+            lname: document.querySelector("#lname").value,
+            email: document.querySelector("#email").value,
+            cemail: document.querySelector("#cemail").value,
+            zp: document.querySelector("#zp").value,
+            numb: document.querySelector("#numb").value,
+            pwd: document.querySelector("#pwd").value,
+        };
+
+        signupArr.push(signupObj);
+        console.log(signupArr);
+        localStorage.setItem("signUpDetails", JSON.stringify(signupArr));
+
+        document.querySelector("input[type='submit']").addEventListener("click", function () {
+            window.location.href = "login.html";
+        });
+    } -->
+
+<!-- </script> -->
